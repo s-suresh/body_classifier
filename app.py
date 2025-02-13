@@ -4,28 +4,32 @@ import pickle
 import numpy as np 
 from PIL import Image  
 
+import streamlit as st  
+from PIL import Image  
+
 # Title of the app  
 st.title("Body Measurements Input (Inches)")  
 
 # Load the silhouette image  
-image = Image.open("Silhouette.png")  # Replace with the path to your silhouette image  
+image = Image.open("silhouette.png")  # Replace with the path to your silhouette image  
+
+# Display the silhouette image  
 st.image(image, use_column_width=True)  
 
-st.header("Enter Your Measurements (in inches)")  
+# Create a container for input fields that will appear below the image  
+with st.expander("Enter Your Measurements (in inches)", expanded=True):  
+    col1, col2 = st.columns(2)  
 
-# Create input fields with labels positioned appropriately  
-col1, col2 = st.columns(2)  
+    # Input fields for body measurements in inches  
+    with col1:  
+        height_inch = st.number_input("Height (inches):", min_value=20, max_value=100, value=67)  
+        waist_inch = st.number_input("Waist Circumference (inches):", min_value=20, max_value=60, value=34)  
+        hip_inch = st.number_input("Hip Circumference (inches):", min_value=20, max_value=60, value=38)  
 
-# Input fields for body measurements in inches  
-with col1:  
-    height_inch = st.number_input("Height (inches):", min_value=20, max_value=100, value=67)  
-    waist_inch = st.number_input("Waist Circumference (inches):", min_value=20, max_value=60, value=34)  
-    hip_inch = st.number_input("Hip Circumference (inches):", min_value=20, max_value=60, value=38)  
-
-with col2:  
-    weight_lb = st.number_input("Weight (kg):", min_value=30, max_value=400, value=150)  
-    chest_inch = st.number_input("Chest Circumference (inches):", min_value=20, max_value=60, value=36)  
-    neck_inch = st.number_input("Neck Circumference (inches):", min_value=10, max_value=30, value=15)  
+    with col2:  
+        weight_lb = st.number_input("Weight (pounds):", min_value=30, max_value=400, value=150)  
+        chest_inch = st.number_input("Chest Circumference (inches):", min_value=20, max_value=60, value=36)  
+        neck_inch = st.number_input("Neck Circumference (inches):", min_value=10, max_value=30, value=15)  
 
 # Calculate BMI after submission  
 if st.button("Submit Measurements"):  
@@ -63,6 +67,7 @@ st.markdown("""
 - [National Heart, Lung, and Blood Institute](https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm): Find more information about BMI and its relevance to health.  
 - [Healthy Eating Guidelines](https://www.choosemyplate.gov/): Explore tips for maintaining a balanced diet.  
 """)  
+
 # Provide an option to restart the input process  
 if st.button("Restart Measurements"):  
     st.experimental_rerun()
