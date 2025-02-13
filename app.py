@@ -45,7 +45,7 @@ if st.button("Submit Measurements"):
     # Display results  
     st.success("Thank you for submitting your measurements!")  
     st.write(f"Height: {height_inch} inches ({height_cm:.2f} cm)")  
-    st.write(f"Weight: {weight_lb} lbs ({weight_kg:.2f} kg)")  
+    st.write(f"Weight: {weight_kg} kgs ({weight_kg:.2f} kg)")  
     st.write(f"Waist Circumference: {waist_inch} inches")  
     st.write(f"Hip Circumference: {hip_inch} inches")  
     st.write(f"Chest Circumference: {chest_inch} inches")  
