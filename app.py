@@ -9,7 +9,7 @@ from PIL import Image
 st.title("Body Measurements Input (Inches)")  
 
 # Load the silhouette image  
-image = Image.open("silhouette.png")  # Replace with the path to your silhouette image  
+image = Image.open("Silhouette.png")  # Replace with the path to your silhouette image  
 st.image(image, use_column_width=True)  
 
 st.header("Enter Your Measurements (in inches)")  
