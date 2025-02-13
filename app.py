@@ -1,8 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import numpy as np
-import matplotlib.pyplot as plt  # Import Matplotlib  
+import numpy as np 
 from PIL import Image  
 
 # Title of the app  
