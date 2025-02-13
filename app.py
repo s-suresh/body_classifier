@@ -22,18 +22,20 @@ with st.expander("Enter Your Measurements (in inches)", expanded=True):
 
     # Input fields for body measurements in inches  
     with col1:  
-        height_inch = st.number_input("Height (inches):", min_value=20, max_value=100, value=67)  
-        waist_inch = st.number_input("Waist Circumference (inches):", min_value=20, max_value=60, value=34)  
-        hip_inch = st.number_input("Hip Circumference (inches):", min_value=20, max_value=60, value=38)  
+        height_inch = st.number_input("Height (inches):", min_value=20, max_value=100, value=57)  
+        waist_inch = st.number_input("Waist Circumference (inches):", min_value=20, max_value=60, value=33)  
+        hip_inch = st.number_input("Hip Circumference (inches):", min_value=20, max_value=60, value=34)  
 
     with col2:  
-        weight_lb = st.number_input("Weight (pounds):", min_value=30, max_value=400, value=150)  
-        chest_inch = st.number_input("Chest Circumference (inches):", min_value=20, max_value=60, value=36)  
+        weight_lb = st.number_input("Weight (pounds):", min_value=30, max_value=400, value=70)  
+        chest_inch = st.number_input("Chest Circumference (inches):", min_value=20, max_value=60, value=34)  
         neck_inch = st.number_input("Neck Circumference (inches):", min_value=10, max_value=30, value=15)  
 
 # Calculate BMI after submission  
 if st.button("Submit Measurements"):  
     # Convert measurements to metric units for BMI calculation  
+
+
     height_cm = height_inch * 2.54  # Convert inches to centimeters  
     weight_kg = weight_lb * 0.453592  # Convert pounds to kilograms  
     
