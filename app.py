@@ -17,7 +17,7 @@ with st.expander("Enter Your Measurements (in inches)", expanded=True):
 
     # Input fields for body measurements in inches  
     with col1:  
-        height_inch = st.number_input("Height (inches):", min_value=20, max_value=100, value=57)  
+        height_inch = st.number_input("Height (inches):", min_value=20, max_value=100, value=65)  
         waist_inch = st.number_input("Waist Circumference (inches):", min_value=20, max_value=60, value=33)  
         hip_inch = st.number_input("Hip Circumference (inches):", min_value=20, max_value=60, value=34)  
 
