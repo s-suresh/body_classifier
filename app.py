@@ -57,4 +57,18 @@ if st.button("Submit Measurements"):
     elif 18.5 <= bmi < 24.9:  
         st.success("Your BMI is in the normal range. Keep maintaining a healthy lifestyle!")  
     elif 25 <= bmi < 29.9:  
-        st.warning("Your BMI suggests that you are overweight. Consider a bal
+        st.warning("Your BMI suggests that you are overweight. Consider a balanced diet and regular exercise.")  
+    else:  
+        st.error("Your BMI indicates obesity. It's advisable to seek guidance from a healthcare provider.")  
+
+# Provide additional resources with links  
+st.header("Helpful Resources")  
+st.markdown("""  
+- [CDC BMI Calculator](https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/english_bmi_calculator/bmi_calculator.html)  
+- [National Heart, Lung, and Blood Institute](https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm)  
+- [Healthy Eating Guidelines](https://www.choosemyplate.gov/)  
+""")  
+
+# Provide an option to restart the input process  
+if st.button("Restart Measurements"):  
+    st.experimental_rerun()  
