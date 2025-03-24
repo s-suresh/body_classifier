@@ -6,7 +6,7 @@ from PIL import Image
 st.title("Body Measurements Input (Inches)")  
 
 # Load the silhouette image  
-image = Image.open("Silhouette.png")  # Ensure this image exists in your working directory  
+image = Image.open("pic02.jpg")  # Ensure this image exists in your working directory  
 
 # Default image width (base value)
 base_width = 200  
