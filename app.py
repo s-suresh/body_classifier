@@ -56,7 +56,7 @@ if st.button("Submit Measurements"):
         st.warning("Your BMI suggests that you are underweight. Consider consulting a healthcare provider.")  
     elif 18.5 <= bmi < 24.9:  
         st.success("Your BMI is in the normal range. Keep maintaining a healthy lifestyle!")  
-    elif 25 <= bmi < 29.9:  
+    elif 24.9 <= bmi < 29.9:  
         st.warning("Your BMI suggests that you are overweight. Consider a balanced diet and regular exercise.")  
     else:  
         st.error("Your BMI indicates obesity. It's advisable to seek guidance from a healthcare provider.")  
