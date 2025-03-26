@@ -88,7 +88,7 @@ if st.button("Submit Measurements"):
         st.success(f"**Your Body Shape: {shape}**")
         st.info(f"**Recommended Clothing Styles:** {tips}")
         cropped_img = crop_image('OIP.jpg', shape)
-        st.image(cropped_img, caption=f"Cropped Image for {body_shape} Shape", use_column_width=True)
+        st.image(cropped_img, caption=f"Cropped Image for {shape} Shape", use_column_width=True)
     else:
         st.error("Please enter valid measurements.")
 
