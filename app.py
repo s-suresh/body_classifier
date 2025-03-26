@@ -74,11 +74,11 @@ if st.button("Submit Measurements"):
 
     # Provide useful tips based on BMI
     if bmi < 18.5:
-        st.success("Tip: Your BMI suggests that you are underweight. Consider consulting a healthcare provider.")
+        st.info("Tip: Your BMI suggests that you are underweight. Consider consulting a healthcare provider.")
     elif 18.5 <= bmi < 24.9:
         st.success("Tip: Your BMI is in the normal range. Keep maintaining a healthy lifestyle!")
     elif 25 <= bmi < 29.9:
-        st.success("Tip: Your BMI suggests that you are overweight. Consider a balanced diet and regular exercise.")
+        st.info("Tip: Your BMI suggests that you are overweight. Consider a balanced diet and regular exercise.")
     else:
         st.success("Tip: Your BMI indicates obesity. It's advisable to seek guidance from a healthcare provider.")
 
