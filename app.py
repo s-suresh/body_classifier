@@ -15,12 +15,12 @@ col1, col2 = st.columns(2)
 
 # Input fields for body measurements in inches
 with col1:
-    height_cm = st.number_input("Height (inches):", min_value=20, max_value=100, value=67)
+    height_cm = st.number_input("Height (cm):", min_value=20, max_value=100, value=67)
     waist_inch = st.number_input("Waist Circumference (inches):", min_value=20, max_value=60, value=34)
     hip_inch = st.number_input("Hip Circumference (inches):", min_value=20, max_value=60, value=38)
 
 with col2:
-    weight_kg = st.number_input("Weight (lbs):", min_value=30, max_value=400, value=150)
+    weight_kg = st.number_input("Weight (kgs):", min_value=30, max_value=400, value=150)
     bust_inch = st.number_input("Chest Circumference (inches):", min_value=20, max_value=60, value=36)
   
 
