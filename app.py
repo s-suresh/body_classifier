@@ -21,7 +21,7 @@ st.title("Body Measurements Input (Inches)")
 
 # Load the silhouette image
 image = Image.open("pic02.jpg")  # Replace with the path to your silhouette image
-st.image(image, use_column_width=True)
+st.image(image, use_container_width=True)
 
 st.header("Enter Your Measurements (in inches)")
 
@@ -88,7 +88,7 @@ if st.button("Submit Measurements"):
         st.success(f"**Your Body Shape: {shape}**")
         st.info(f"**Recommended Clothing Styles:** {tips}")
         cropped_img = crop_image('OIP.jpg', shape)
-        st.image(cropped_img, caption=f"Cropped Image for {shape} Shape", use_column_width=True)
+        st.image(cropped_img, caption=f"Cropped Image for {shape} Shape", use_container_width=True)
     else:
         st.error("Please enter valid measurements.")
 
