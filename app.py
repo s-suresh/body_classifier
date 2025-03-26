@@ -1,6 +1,21 @@
 import streamlit as st
 from PIL import Image
+def crop_image(image_path, body_shape):
+    img = Image.open(image_path)
+    width, height = img.size
+    
+    crop_areas = {
+        "Hourglass": (width * 0.2, 0, width * 0.8, height),
+        "Apple": (width * 0.3, 0, width * 0.7, height),
+        "Pear": (width * 0.2, height * 0.3, width * 0.8, height),
+        "Inverted Triangle": (width * 0.1, 0, width * 0.9, height * 0.8),
+        "Rectangle": (0, 0, width, height)
+    }
+    
+    cropped_img = img.crop(crop_areas[body_shape])
+    return cropped_img
 
+#################################
 # Title of the app
 st.title("Body Measurements Input (Inches)")
 
@@ -72,6 +87,8 @@ if st.button("Submit Measurements"):
         shape, tips = classify_body_shape(bust_inch, waist_inch, hip_inch)
         st.success(f"**Your Body Shape: {shape}**")
         st.info(f"**Recommended Clothing Styles:** {tips}")
+        cropped_img = crop_image(OIP.jpg, shape)
+        st.image(cropped_img, caption=f"Cropped Image for {body_shape} Shape", use_column_width=True)
     else:
         st.error("Please enter valid measurements.")
 
