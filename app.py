@@ -70,7 +70,7 @@ if st.button("Submit Measurements"):
         st.write("Tip: Your BMI indicates obesity. It's advisable to seek guidance from a healthcare provider.")
 
     # Classify body shape
-    if bust_inch and waist_inch_body and hips_inch:
+    if bust_inch and waist_inch and hips_inch:
         shape, tips = classify_body_shape(bust_inch, waist_inch, hips_inch)
         st.success(f"**Your Body Shape: {shape}**")
         st.info(f"**Recommended Clothing Styles:** {tips}")
